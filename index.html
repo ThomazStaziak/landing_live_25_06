@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo_mm.png"
+      type="image/x-icon"
+    />
+    <title>E agora empreendedor?</title>
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        25/junho <span>//</span> quinta-feira <span>//</span> 18h
+      </div>
+      <section class="container">
+        <div class="row">
+          <div class="col s12 m6">
+            <h3>
+              <span class="live">live</span>
+            </h3>
+            <h1 class="main-title">
+              e agora, <br />
+              empreendedor?
+            </h1>
+            <h2 class="sub-title">
+              Qual é o futuro das Pequenas <br />
+              e Médias Empresas no Brasil?
+            </h2>
+            <p class="featured">
+              <span class="slash">//</span> Retomada econômica
+            </p>
+            <p class="featured">
+              <span class="slash">//</span> Gestão de crise
+            </p>
+            <p class="featured"><span class="slash">//</span> Crédito</p>
+            <p class="featured"><span class="slash">//</span> Digitalização</p>
+          </div>
+          <div class="col s12 m6">
+            <!-- form section -->
+            <section>
+              <h1 class="form-title">
+                Inscreva-se <br />
+                para participar
+              </h1>
+              <div class="row">
+                <form id="leadForm" method="POST" class="col s12">
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input
+                        id="first_name"
+                        name="firstName"
+                        type="text"
+                        required
+                      />
+                      <label for="first_name"
+                        >Nome<small class="required">*</small></label
+                      >
+                      <span id="nameError" style="display: none; color: red;"
+                        >Campo obrigatório</span
+                      >
+                    </div>
+                    <div class="input-field col s6">
+                      <input
+                        id="last_name"
+                        name="lastName"
+                        type="text"
+                        required
+                      />
+                      <label for="last_name"
+                        >Sobrenome<small class="required">*</small></label
+                      >
+                      <span
+                        id="lastnameError"
+                        style="display: none; color: red;"
+                        >Campo obrigatório</span
+                      >
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input
+                        id="email_inline"
+                        name="email"
+                        type="email"
+                        required
+                      />
+                      <label for="email_inline"
+                        >Seu melhor e-mail<small class="required"
+                          >*</small
+                        ></label
+                      >
+                      <span id="emailError" class="helper-text"
+                        >Ex: email@exemplo.com</span
+                      >
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        required
+                        minlength="15"
+                        maxlength="15"
+                      />
+                      <label for="phone"
+                        >Celular com DDD<small class="required">*</small></label
+                      >
+                      <span id="phoneError" class="helper-text"
+                        >Ex: (11) 98765-4321</span
+                      >
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <textarea
+                        id="textarea1"
+                        name="question"
+                        class="materialize-textarea"
+                        maxlength="150"
+                      ></textarea>
+                      <label for="textarea1"
+                        >Quer fazer uma pergunta aos palestrantes?
+                      </label>
+                      <span class="helper-text"
+                        >Tentaremos responder durante a live</span
+                      >
+                    </div>
+                  </div>
+                  <button
+                    class="waves-effect waves-light btn btn-mm col s12 m6"
+                  >
+                    Quero participar
+                  </button>
+                  <button
+                    id="clean"
+                    type="reset"
+                    style="display: none;"
+                  ></button>
+                </form>
+              </div>
+            </section>
+          </div>
+        </div>
+        <!-- participants section -->
+      </section>
+      <section class="participants-section">
+        <img src="./assets/images/participantes.png" alt="" />
+      </section>
+    </main>
+
+    <footer>
+      <a
+        href="https://moneymoneyinvest.com.br"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="./assets/images/logo.png" alt="Logo Money Money invest" />
+      </a>
+    </footer>
+
+    <div id="successModal" class="modal">
+      <div class="modal-content">
+        <div class="icon">
+          <i class="material-icons">check_circle</i>
+        </div>
+        <h4>Tudo certo <span id="name"></span>!</h4>
+        <p>
+          Sua inscrição foi realizada com sucesso, fique de olho em seu e-mail,
+          enviaremos mais detalhes por lá!
+        </p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect btn-mm btn-flat">Fechar</a>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
