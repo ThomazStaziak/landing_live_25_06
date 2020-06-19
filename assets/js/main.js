@@ -24,12 +24,11 @@ $("#leadForm").on("submit", function (evt) {
     })
       .then((response) => response.json())
       .then((data) => console.log(data));
+    $("#name").html(formData[0].value.trim());
+    $("#clean").click();
+    $("#successModal").modal();
+    $("#successModal").modal("open");
   } catch (error) {
-    alert("deu pau");
+    alert("Tente novamente em alguns instantes!");
   }
-
-  $("#name").html(formData[0].value.trim());
-  $("#clean").click();
-  $("#successModal").modal();
-  $("#successModal").modal("open");
 });

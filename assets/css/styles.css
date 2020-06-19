@@ -156,6 +156,21 @@ footer {
 }
 
 @media only screen and (max-width: 500px) {
+  .main-title,
+  .live {
+    font-size: 2rem;
+  }
+
+  .sub-title,
+  .form-title {
+    font-size: 1.5rem;
+  }
+
+  .featured,
+  .header {
+    font-size: 1rem;
+  }
+
   .participants-section img {
     width: 100%;
   }
