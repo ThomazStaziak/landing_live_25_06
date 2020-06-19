@@ -122,9 +122,9 @@ label.active {
   align-items: center;
 }
 
-.modal .icon i {
+.modal .icon img {
   font-size: 64px;
-  color: green;
+  width: 30%;
 }
 
 .modal .modal-footer {
@@ -147,5 +147,21 @@ footer {
 @media only screen and (max-width: 1200px) {
   .participants-section img {
     width: 100%;
+  }
+
+  .modal .icon img {
+    font-size: 64px;
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .participants-section img {
+    width: 100%;
+  }
+
+  .modal .icon img {
+    font-size: 64px;
+    width: 70%;
   }
 }

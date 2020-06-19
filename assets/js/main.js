@@ -17,9 +17,17 @@ $("#leadForm").on("submit", function (evt) {
     question,
   };
 
-  console.log(data);
+  try {
+    fetch("https://moneymoney-live.azurewebsites.net/api/moneymoney-live", {
+      method: "POST",
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  } catch (error) {
+    alert("deu pau");
+  }
 
-  // submit
   $("#name").html(formData[0].value.trim());
   $("#clean").click();
   $("#successModal").modal();
