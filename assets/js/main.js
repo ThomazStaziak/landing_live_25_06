@@ -7,11 +7,13 @@ $("#leadForm").on("submit", function (evt) {
 
   const name = `${formData[0].value.trim()} ${formData[1].value.trim()}`;
   const email = formData[2].value.trim().toLowerCase();
-  const question = formData[3].value.trim();
+  const phone = formData[3].value.trim();
+  const question = formData[4].value.trim();
 
   const data = {
     name,
     email,
+    phone,
     question,
   };
 
